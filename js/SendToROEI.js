@@ -1,13 +1,4 @@
-let data = [
-    {
-     "arshNum": "С-МА/29-03-2023/234325007",
-     "typeSI": "74910-19",
-     "verifDate": "29.03.2023",
-     "validDate": "28.03.2025",
-     "conclusion": "Пригодно",
-     "verifSurname": "Шамшин"
-    }
- ];
+let data = jsonObject;
  
 const selectors = {
     success: '#mainDialog > fgis-modal > div > div.fgis-modal__content > div.fgis-modal__body > p',
@@ -209,3 +200,5 @@ const selectors = {
       await retry(row);
     }
   }
+
+  go()

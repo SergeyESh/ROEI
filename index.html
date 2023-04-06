@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Конвертировать Excel File в JSON</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <script type="text/javascript" src="./js/xlsx.full.min.js"></script> -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.3/xlsx.full.min.js"></script>
     
   </head>
@@ -19,7 +20,9 @@
             <div class="panel-body">
                 <!-- Input type file to upload excel file -->
                 <input type="file" id="fileUpload" accept=".xls,.xlsx" /><br />
-                <button type="button" id="uploadExcel">Convert</button>
+                <button type="button" id="uploadExcel">Конвертировать</button>
+                <!-- <button type="button" id="deleteFile">Очистить</button> -->
+
 
                 <!-- Render parsed JSON data here -->
                 <div style="margin-top:10px;">
@@ -28,7 +31,7 @@
             </div>
         </div>
     </div>
-    <script src="js/ExcelToJson.js"></script>
+    <script src="./js/ExcelToJson.js"></script>
 
     <div class="container2">
       <!-- <h4>Отправка данных в Росаккредитацию</h4> -->
@@ -37,15 +40,16 @@
           <div class="panel-body">
               <!-- Input type file to upload excel file -->
               <!-- <input type="file" id="fileUpload" accept=".xls,.xlsx" /><br /> -->
-              <button type="button" id="sendData">Send</button>
+              <button type="button" id="sendData" onclick="openRoei()">Send</button>
 
               <!-- Render parsed JSON data here -->
-              <!-- <div style="margin-top:10px;">
-                  <pre id="jsonData" style="height: 250px; padding: 12px;"></pre>
-              </div> -->
+              <div style="margin-top:10px;">
+                  <pre id="sendData" style="height: 250px; padding: 12px;"></pre>
+              </div>
           </div>
       </div>
     </div>
+    <script src="./js/SendToROEI.js"></script>
 
     
   </body>
